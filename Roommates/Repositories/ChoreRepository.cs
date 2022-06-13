@@ -56,7 +56,7 @@ namespace Roommates.Repositories
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT Name,  FROM Chore WHERE Id = @id";
+                    cmd.CommandText = "SELECT Name FROM Chore WHERE Id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
